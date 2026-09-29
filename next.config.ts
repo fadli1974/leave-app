@@ -1,7 +1,12 @@
-import type { NextConfig } from "next";
+﻿import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: 'export',
+  // if hosting on github pages without custom domain, they might need basePath.
+  // but if they just upload the files, let's keep it simple.
+  images: {
+    unoptimized: true,
+  }
 };
 
 export default nextConfig;
